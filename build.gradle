@@ -3,7 +3,7 @@ plugins {
    id 'war'
 }
 
-group = 'twcrone.jee9'
+group = 'twcrone.jee91'
 version = '1.0'
 
 repositories {
@@ -11,10 +11,16 @@ repositories {
 }
 
 dependencies {
-   providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:9.0.0'
+   providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:9.1.0'
 }
 
 
 war {
-   archiveName 'jee9.war'
+   archiveName 'jee91.war'
+}
+
+java {
+   toolchain {
+      languageVersion = JavaLanguageVersion.of(11)
+   }
 }
