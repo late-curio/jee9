@@ -7,6 +7,10 @@ The app is for testing the New Relic Java Agent for Jakarta EE 9/9.1
 
 `./gradlew build`
 
+OR
+
+`mvn install`
+
 NOTE:  Jakarta 9.1 specific version of code in `jee91` branch and requires Java 11 to build and run.
 
 
@@ -16,7 +20,7 @@ Add a `setenv.sh` (if does not exist) to the `$TOMCAT_HOME/bin` directory with t
 
 `export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/location/to/newrelic.jar -Dnewrelic.config.file=/location/to/newrelic.yml -Dnewrelic.environment=[production|staging]"`
 
-Copy the war file from `build/libs` into `$TOMCAT_HOME\webapps`
+Copy the war file from `build/libs` (or `target`) into `$TOMCAT_HOME\webapps`
 
 Then run `$TOMCAT_HOME\bin\startup.sh`
 
